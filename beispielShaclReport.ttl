@@ -1,0 +1,40 @@
+Validation Report
+Conforms: False
+Results (6):
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("The segment MOA+131 is missing, i.e. the indication of the sums of the additions/deductions.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path edifact-o:hasTotalAdditionsAndDeductions ]
+	Focus Node: <http://example.com/mid1>
+	Result Path: edifact-o:hasTotalAdditionsAndDeductions
+	Message: The segment MOA+131 is missing, i.e. the indication of the sums of the additions/deductions.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("The segment MOA+125 is missing, i.e. the indication of the taxable amount.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path edifact-o:hasTaxableAmount ]
+	Focus Node: <http://example.com/mid1>
+	Result Path: edifact-o:hasTaxableAmount
+	Message: The segment MOA+125 is missing, i.e. the indication of the taxable amount.
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:maxLength Literal("14", datatype=xsd:integer) ; sh:message Literal("The segment MOA+77 is missing, i.e. the invoice amount is missing.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path edifact-o:hasInvoiceAmount ]
+	Focus Node: <http://example.com/mid1>
+	Result Path: edifact-o:hasInvoiceAmount
+	Message: The segment MOA+77 is missing, i.e. the invoice amount is missing.
+Constraint Violation in InConstraintComponent (http://www.w3.org/ns/shacl#InConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:string ; sh:in ( Literal("Commercial invoice") Literal("Credit advice") Literal("Value credit") Literal("Value debit") Literal("Handelsrechnung") Literal("Gutschriftsanzeige") Literal("Wertgutschrift") Literal("Wertbelastung") ) ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Data element 1001 is missing in the BGM segment") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path edifact-o:hasDocumentType ]
+	Focus Node: <http://example.com/mid1>
+	Value Node: Literal("Rechnung")
+	Result Path: edifact-o:hasDocumentType
+	Message: Data element 1001 is missing in the BGM segment
+Constraint Violation in HasValueConstraintComponent (http://www.w3.org/ns/shacl#HasValueConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:hasValue Literal("ProcessExample") ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path edifact-o:belongsToProcess ]
+	Focus Node: <http://example.com/Invoice1>
+	Result Path: edifact-o:belongsToProcess
+	Message: Node <http://example.com/Invoice1>->edifact-o:belongsToProcess does not contain a value in the set: ['Literal("ProcessExample")']
+Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("The segment MOA+79 is missing, i.e. the indication of the total position amount.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:path edifact-o:hasTotalLineItemAmount ]
+	Focus Node: <http://example.com/mid1>
+	Result Path: edifact-o:hasTotalLineItemAmount
+	Message: The segment MOA+79 is missing, i.e. the indication of the total position amount.

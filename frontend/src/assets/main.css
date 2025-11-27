@@ -1,0 +1,44 @@
+@import './base.css';
+
+/* Global reset */
+html, body, #app {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* App soll volle Breite haben */
+#app {
+  max-width: none;   /* wichtig */
+  margin: 0;         /* zentrierung weg */
+  padding: 0;        /* außenabstand weg */
+  font-weight: normal;
+}
+
+/* Links etc. – kannst du lassen */
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+/* Das hier im Original sorgt für zentrieren & Grid-Layout -> raus/überschreiben */
+@media (min-width: 1024px) {
+  body {
+    display: block;         /* statt flex */
+    place-items: initial;   /* reset */
+  }
+
+  #app {
+    display: block;         /* kein 2-Spalten-Grid erzwingen */
+    padding: 0;             /* kein extra padding */
+  }
+}

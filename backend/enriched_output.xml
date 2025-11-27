@@ -1,0 +1,393 @@
+<?xml version="1.0" ?>
+<Interchange format="EDIFACT" eancomstructure="Structure0">
+  <synatxIdentifier>UNOC</synatxIdentifier>
+  <synatxVersion>3</synatxVersion>
+  <senderIndicator>5847362910008</senderIndicator>
+  <recipientIndicator>7428951000000</recipientIndicator>
+  <creationDate>230608</creationDate>
+  <creationTime>1004</creationTime>
+  <dataExchangeReference>80</dataExchangeReference>
+  <Message details="Invoice1" type="INVOIC" version="D" release="96A" mid="mid1" eancomstructure="Structure0" SupplierRole="SU1" BuyerRole="BY1" InvoiceeRole="IV1" DeliveryPartyRole="DP1">
+    <ProcessIdentification>None</ProcessIdentification>
+    <Dokumentenart>Rechnung</Dokumentenart>
+    <Dokumentennummer>23051247</Dokumentennummer>
+    <Dokumentenfunktion>Original</Dokumentenfunktion>
+    <DTM_137>20230608</DTM_137>
+    <DTM_35>20230607</DTM_35>
+    <Referenz_ON>16-92847-53</Referenz_ON>
+    <Referenz_VN>VO324758</Referenz_VN>
+    <Referenz_VN_Date>20230608</Referenz_VN_Date>
+    <Party agentRole="SupplierRole" organisation="SU1" details="Invoice1">
+      <PartyID>5847362910008</PartyID>
+      <CodeListResponsibleAgency>9</CodeListResponsibleAgency>
+      <PartyName>ABC Trading B.V.:Gate 5</PartyName>
+      <Street>Industrial Street 123</Street>
+      <City>City A</City>
+      <PostalCode>3012 AA</PostalCode>
+      <CountryCode>NL</CountryCode>
+      <Umsatzsteuernummer>NL824567891B01</Umsatzsteuernummer>
+    </Party>
+    <Party agentRole="BuyerRole" organisation="BY1" details="Invoice1">
+      <PartyID>4521888010871</PartyID>
+      <CodeListResponsibleAgency>9</CodeListResponsibleAgency>
+      <PartyName>Smith &amp; Partners NV</PartyName>
+      <Street>Main Avenue 456</Street>
+      <City>City B</City>
+      <PostalCode>2100</PostalCode>
+      <CountryCode>BE</CountryCode>
+      <Umsatzsteuernummer>BE0478912345</Umsatzsteuernummer>
+    </Party>
+    <Party agentRole="InvoiceeRole" organisation="IV1" details="Invoice1">
+      <PartyID>7428951000000</PartyID>
+      <CodeListResponsibleAgency>9</CodeListResponsibleAgency>
+      <PartyName>Central Purchasing Office: GmbH</PartyName>
+      <Street>Business Road 789</Street>
+      <City>City C</City>
+      <PostalCode>20095</PostalCode>
+      <CountryCode>DE</CountryCode>
+      <Umsatzsteuernummer>BE0491823456</Umsatzsteuernummer>
+    </Party>
+    <Party agentRole="DeliveryPartyRole" organisation="DP1" details="Invoice1">
+      <PartyID>4521888010871</PartyID>
+      <CodeListResponsibleAgency>9</CodeListResponsibleAgency>
+      <PartyName>Smith &amp; Partners NV:MitglNr. 548721</PartyName>
+      <Street>Main Avenue 456</Street>
+      <City>City B</City>
+      <PostalCode>2100</PostalCode>
+      <CountryCode>BE</CountryCode>
+      <Umsatzsteuernummer>BE0478912345</Umsatzsteuernummer>
+    </Party>
+    <Waehrung>EUR</Waehrung>
+    <WaehrungRechnung>EUR</WaehrungRechnung>
+    <ZahlungsbedingungsArt>Abzug</ZahlungsbedingungsArt>
+    <ZahlungsbezugsterminTage>60 Tag(e) nach Rechnungsdatum</ZahlungsbezugsterminTage>
+    <AbzugProzentsatz>3</AbzugProzentsatz>
+    <AbzugProzentsatzZahlungsbedingungen>3</AbzugProzentsatzZahlungsbedingungen>
+    <LineItem nid="Item1" details="Invoice1">
+      <International_Article_Number>05847291840335</International_Article_Number>
+      <Produktidentifikation>International_Article_Number</Produktidentifikation>
+      <InvoiceLine/>
+      <Artikelnummer_des_Lieferanten>GB058412200</Artikelnummer_des_Lieferanten>
+      <Zusaetzliche_Produktidentifikation>Artikelnummer_des_Lieferanten</Zusaetzliche_Produktidentifikation>
+      <Description>GB® mounting bracket M12x 250x50 with:GB mount.brkt M12x 250x50</Description>
+      <Ausgelieferte_Menge_Einheit>Stueck</Ausgelieferte_Menge_Einheit>
+      <Ausgelieferte_Menge>100 Stueck</Ausgelieferte_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <Berechnete_Menge_Einheit>Stueck</Berechnete_Menge_Einheit>
+      <Berechnete_Menge>100 Stueck</Berechnete_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <MOA_203>93</MOA_203>
+      <Rechnungspreis>186</Rechnungspreis>
+      <Preis_Maßeinheit>Stueck</Preis_Maßeinheit>
+      <Rechnungspreis_Einheit>186 Stueck</Rechnungspreis_Einheit>
+      <unitPriceBase>100</unitPriceBase>
+      <TAX_VAT>0</TAX_VAT>
+      <Abschlag>Andere Dienste</Abschlag>
+      <MOA_23>93</MOA_23>
+    </LineItem>
+    <MOA_77>93</MOA_77>
+    <MOA_79>93</MOA_79>
+    <MOA_176>0</MOA_176>
+    <MOA_129>2.79</MOA_129>
+    <MOA_125>93</MOA_125>
+    <TAX_VAT>0</TAX_VAT>
+    <MOA_124>0</MOA_124>
+  </Message>
+  <messageReferenceNumber>1</messageReferenceNumber>
+  <messageTypeIdentifier>INVOIC</messageTypeIdentifier>
+  <versionNumberMessageType>D</versionNumberMessageType>
+  <releaseNumberMessageType>96A</releaseNumberMessageType>
+  <managingOrganisations>UN</managingOrganisations>
+  <controlSegmentBetweenItemAndTotalPart>S</controlSegmentBetweenItemAndTotalPart>
+  <totalNumberOfSegments>37</totalNumberOfSegments>
+  <Message details="Invoice2" type="INVOIC" version="D" release="96A" mid="mid2" eancomstructure="Structure0" SupplierRole="SU2" BuyerRole="BY2" InvoiceeRole="IV2" DeliveryPartyRole="DP2">
+    <ProcessIdentification>None</ProcessIdentification>
+    <Dokumentenart>Rechnung</Dokumentenart>
+    <Dokumentennummer>23052834</Dokumentennummer>
+    <Dokumentenfunktion>Original</Dokumentenfunktion>
+    <DTM_137>20230608</DTM_137>
+    <DTM_35>20230607</DTM_35>
+    <Referenz_ON>16-93254-72</Referenz_ON>
+    <Referenz_VN>VO328145</Referenz_VN>
+    <Referenz_VN_Date>20230608</Referenz_VN_Date>
+    <Party agentRole="SupplierRole" organisation="SU2" details="Invoice2">
+      <PartyID>5847362910008</PartyID>
+      <CodeListResponsibleAgency>9</CodeListResponsibleAgency>
+      <PartyName>ABC Trading B.V.:Gate 5</PartyName>
+      <Street>Industrial Street 123</Street>
+      <City>City A</City>
+      <PostalCode>3012 AA</PostalCode>
+      <CountryCode>NL</CountryCode>
+      <Umsatzsteuernummer>NL824567891B01</Umsatzsteuernummer>
+    </Party>
+    <Party agentRole="BuyerRole" organisation="BY2" details="Invoice2">
+      <PartyID>4521888010871</PartyID>
+      <CodeListResponsibleAgency>9</CodeListResponsibleAgency>
+      <PartyName>Smith &amp; Partners NV</PartyName>
+      <Street>Main Avenue 456</Street>
+      <City>City B</City>
+      <PostalCode>2100</PostalCode>
+      <CountryCode>BE</CountryCode>
+      <Umsatzsteuernummer>BE0478912345</Umsatzsteuernummer>
+    </Party>
+    <Party agentRole="InvoiceeRole" organisation="IV2" details="Invoice2">
+      <PartyID>7428951000000</PartyID>
+      <CodeListResponsibleAgency>9</CodeListResponsibleAgency>
+      <PartyName>Central Purchasing Office: GmbH</PartyName>
+      <Street>Business Road 789</Street>
+      <City>City C</City>
+      <PostalCode>20095</PostalCode>
+      <CountryCode>DE</CountryCode>
+      <Umsatzsteuernummer>BE0491823456</Umsatzsteuernummer>
+    </Party>
+    <Party agentRole="DeliveryPartyRole" organisation="DP2" details="Invoice2">
+      <PartyID>4521888010871</PartyID>
+      <CodeListResponsibleAgency>9</CodeListResponsibleAgency>
+      <PartyName>Smith &amp; Partners NV:MitglNr. 548721</PartyName>
+      <Street>Main Avenue 456</Street>
+      <City>City B</City>
+      <PostalCode>2100</PostalCode>
+      <CountryCode>BE</CountryCode>
+      <Umsatzsteuernummer>BE0478912345</Umsatzsteuernummer>
+    </Party>
+    <Waehrung>EUR</Waehrung>
+    <WaehrungRechnung>EUR</WaehrungRechnung>
+    <ZahlungsbedingungsArt>Abzug</ZahlungsbedingungsArt>
+    <ZahlungsbezugsterminTage>60 Tag(e) nach Rechnungsdatum</ZahlungsbezugsterminTage>
+    <AbzugProzentsatz>3</AbzugProzentsatz>
+    <AbzugProzentsatzZahlungsbedingungen>3</AbzugProzentsatzZahlungsbedingungen>
+    <LineItem nid="Item2" details="Invoice2">
+      <International_Article_Number>05847362215824</International_Article_Number>
+      <Produktidentifikation>International_Article_Number</Produktidentifikation>
+      <InvoiceLine/>
+      <Artikelnummer_des_Lieferanten>62847153</Artikelnummer_des_Lieferanten>
+      <Zusaetzliche_Produktidentifikation>Artikelnummer_des_Lieferanten</Zusaetzliche_Produktidentifikation>
+      <Description>Premium® Ultimate 4,0x 40/24 flat:Premium Ultimate 4,0x 40/24 T20 znc</Description>
+      <Ausgelieferte_Menge_Einheit>Stueck</Ausgelieferte_Menge_Einheit>
+      <Ausgelieferte_Menge>2500 Stueck</Ausgelieferte_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <Berechnete_Menge_Einheit>Stueck</Berechnete_Menge_Einheit>
+      <Berechnete_Menge>2500 Stueck</Berechnete_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <MOA_203>34.43</MOA_203>
+      <Rechnungspreis>3.13</Rechnungspreis>
+      <Preis_Maßeinheit>Stueck</Preis_Maßeinheit>
+      <Rechnungspreis_Einheit>3.13 Stueck</Rechnungspreis_Einheit>
+      <unitPriceBase>100</unitPriceBase>
+      <TAX_VAT>0</TAX_VAT>
+      <Abschlag>Andere Dienste</Abschlag>
+      <MOA_23>43.82</MOA_23>
+    </LineItem>
+    <LineItem nid="Item3" details="Invoice2">
+      <International_Article_Number>05847362218945</International_Article_Number>
+      <Produktidentifikation>International_Article_Number</Produktidentifikation>
+      <InvoiceLine/>
+      <Artikelnummer_des_Lieferanten>62859427</Artikelnummer_des_Lieferanten>
+      <Zusaetzliche_Produktidentifikation>Artikelnummer_des_Lieferanten</Zusaetzliche_Produktidentifikation>
+      <Description>Premium® Ultimate 6,0x160/70 flat:Premium Ultimate 6,0x160/70 T30 znc</Description>
+      <Ausgelieferte_Menge_Einheit>Stueck</Ausgelieferte_Menge_Einheit>
+      <Ausgelieferte_Menge>500 Stueck</Ausgelieferte_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <Berechnete_Menge_Einheit>Stueck</Berechnete_Menge_Einheit>
+      <Berechnete_Menge>500 Stueck</Berechnete_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <MOA_203>87.69</MOA_203>
+      <Rechnungspreis>39.86</Rechnungspreis>
+      <Preis_Maßeinheit>Stueck</Preis_Maßeinheit>
+      <Rechnungspreis_Einheit>39.86 Stueck</Rechnungspreis_Einheit>
+      <unitPriceBase>100</unitPriceBase>
+      <TAX_VAT>0</TAX_VAT>
+      <Abschlag>Andere Dienste</Abschlag>
+      <MOA_23>111.61</MOA_23>
+    </LineItem>
+    <LineItem nid="Item4" details="Invoice2">
+      <International_Article_Number>05847362274138</International_Article_Number>
+      <Produktidentifikation>International_Article_Number</Produktidentifikation>
+      <InvoiceLine/>
+      <Artikelnummer_des_Lieferanten>62859518</Artikelnummer_des_Lieferanten>
+      <Zusaetzliche_Produktidentifikation>Artikelnummer_des_Lieferanten</Zusaetzliche_Produktidentifikation>
+      <Description>Premium® Ultimate 6,0x220/70 flat:Premium Ultimate 6,0x220/70 T30 znc</Description>
+      <Ausgelieferte_Menge_Einheit>Stueck</Ausgelieferte_Menge_Einheit>
+      <Ausgelieferte_Menge>500 Stueck</Ausgelieferte_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <Berechnete_Menge_Einheit>Stueck</Berechnete_Menge_Einheit>
+      <Berechnete_Menge>500 Stueck</Berechnete_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <MOA_203>188.83</MOA_203>
+      <Rechnungspreis>85.83</Rechnungspreis>
+      <Preis_Maßeinheit>Stueck</Preis_Maßeinheit>
+      <Rechnungspreis_Einheit>85.83 Stueck</Rechnungspreis_Einheit>
+      <unitPriceBase>100</unitPriceBase>
+      <TAX_VAT>0</TAX_VAT>
+      <Abschlag>Andere Dienste</Abschlag>
+      <MOA_23>240.32</MOA_23>
+    </LineItem>
+    <LineItem nid="Item5" details="Invoice2">
+      <International_Article_Number>05847362285742</International_Article_Number>
+      <Produktidentifikation>International_Article_Number</Produktidentifikation>
+      <InvoiceLine/>
+      <Artikelnummer_des_Lieferanten>62952847</Artikelnummer_des_Lieferanten>
+      <Zusaetzliche_Produktidentifikation>Artikelnummer_des_Lieferanten</Zusaetzliche_Produktidentifikation>
+      <Description>Premium® Ultimate 6,0x 30 counters:Premium cs 6,0x 30 T30 znc</Description>
+      <Ausgelieferte_Menge_Einheit>Stueck</Ausgelieferte_Menge_Einheit>
+      <Ausgelieferte_Menge>500 Stueck</Ausgelieferte_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <Berechnete_Menge_Einheit>Stueck</Berechnete_Menge_Einheit>
+      <Berechnete_Menge>500 Stueck</Berechnete_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <MOA_203>24.11</MOA_203>
+      <Rechnungspreis>10.96</Rechnungspreis>
+      <Preis_Maßeinheit>Stueck</Preis_Maßeinheit>
+      <Rechnungspreis_Einheit>10.96 Stueck</Rechnungspreis_Einheit>
+      <unitPriceBase>100</unitPriceBase>
+      <TAX_VAT>0</TAX_VAT>
+      <Abschlag>Andere Dienste</Abschlag>
+      <MOA_23>30.69</MOA_23>
+    </LineItem>
+    <LineItem nid="Item6" details="Invoice2">
+      <International_Article_Number>05847362715824</International_Article_Number>
+      <Produktidentifikation>International_Article_Number</Produktidentifikation>
+      <InvoiceLine/>
+      <Artikelnummer_des_Lieferanten>63045189</Artikelnummer_des_Lieferanten>
+      <Zusaetzliche_Produktidentifikation>Artikelnummer_des_Lieferanten</Zusaetzliche_Produktidentifikation>
+      <Description>Premium® Ultimate Shield Outdoor 4,:Premium 4,0x 40 cntr T20 shield cor</Description>
+      <Ausgelieferte_Menge_Einheit>Stueck</Ausgelieferte_Menge_Einheit>
+      <Ausgelieferte_Menge>1000 Stueck</Ausgelieferte_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <Berechnete_Menge_Einheit>Stueck</Berechnete_Menge_Einheit>
+      <Berechnete_Menge>1000 Stueck</Berechnete_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <MOA_203>24.2</MOA_203>
+      <Rechnungspreis>5.5</Rechnungspreis>
+      <Preis_Maßeinheit>Stueck</Preis_Maßeinheit>
+      <Rechnungspreis_Einheit>5.5 Stueck</Rechnungspreis_Einheit>
+      <unitPriceBase>100</unitPriceBase>
+      <TAX_VAT>0</TAX_VAT>
+      <Abschlag>Andere Dienste</Abschlag>
+      <MOA_23>30.8</MOA_23>
+    </LineItem>
+    <LineItem nid="Item7" details="Invoice2">
+      <International_Article_Number>05847362718459</International_Article_Number>
+      <Produktidentifikation>International_Article_Number</Produktidentifikation>
+      <InvoiceLine/>
+      <Artikelnummer_des_Lieferanten>63158324</Artikelnummer_des_Lieferanten>
+      <Zusaetzliche_Produktidentifikation>Artikelnummer_des_Lieferanten</Zusaetzliche_Produktidentifikation>
+      <Description>Premium® Ultimate Shield Outdoor 6,:Premium cs 6,0x140/80 T30 shield</Description>
+      <Ausgelieferte_Menge_Einheit>Stueck</Ausgelieferte_Menge_Einheit>
+      <Ausgelieferte_Menge>250 Stueck</Ausgelieferte_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <Berechnete_Menge_Einheit>Stueck</Berechnete_Menge_Einheit>
+      <Berechnete_Menge>250 Stueck</Berechnete_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <MOA_203>53.61</MOA_203>
+      <Rechnungspreis>48.73</Rechnungspreis>
+      <Preis_Maßeinheit>Stueck</Preis_Maßeinheit>
+      <Rechnungspreis_Einheit>48.73 Stueck</Rechnungspreis_Einheit>
+      <unitPriceBase>100</unitPriceBase>
+      <TAX_VAT>0</TAX_VAT>
+      <Abschlag>Andere Dienste</Abschlag>
+      <MOA_23>68.22</MOA_23>
+    </LineItem>
+    <LineItem nid="Item8" details="Invoice2">
+      <International_Article_Number>04852147038521</International_Article_Number>
+      <Produktidentifikation>International_Article_Number</Produktidentifikation>
+      <InvoiceLine/>
+      <Artikelnummer_des_Lieferanten>18524713</Artikelnummer_des_Lieferanten>
+      <Zusaetzliche_Produktidentifikation>Artikelnummer_des_Lieferanten</Zusaetzliche_Produktidentifikation>
+      <Description>XYZ SUPERFIX® anchor mortar 1-comp:XYZ anchor mortar 1-comp 5kg</Description>
+      <Ausgelieferte_Menge_Einheit>BJ</Ausgelieferte_Menge_Einheit>
+      <Ausgelieferte_Menge>2 BJ</Ausgelieferte_Menge>
+      <Mengen_Einheit>BJ</Mengen_Einheit>
+      <Berechnete_Menge_Einheit>BJ</Berechnete_Menge_Einheit>
+      <Berechnete_Menge>2 BJ</Berechnete_Menge>
+      <Mengen_Einheit>BJ</Mengen_Einheit>
+      <MOA_203>75.69</MOA_203>
+      <Rechnungspreis>75.69</Rechnungspreis>
+      <TAX_VAT>0</TAX_VAT>
+      <Abschlag>Andere Dienste</Abschlag>
+      <MOA_23>75.69</MOA_23>
+    </LineItem>
+    <LineItem nid="Item9" details="Invoice2">
+      <International_Article_Number>05847362745821</International_Article_Number>
+      <Produktidentifikation>International_Article_Number</Produktidentifikation>
+      <InvoiceLine/>
+      <Artikelnummer_des_Lieferanten>62852471</Artikelnummer_des_Lieferanten>
+      <Zusaetzliche_Produktidentifikation>Artikelnummer_des_Lieferanten</Zusaetzliche_Produktidentifikation>
+      <Description>Premium® Ultimate 5,0x 35/18 flat:Premium Ultimate 5,0x 35/18 T25 znc</Description>
+      <Ausgelieferte_Menge_Einheit>Stueck</Ausgelieferte_Menge_Einheit>
+      <Ausgelieferte_Menge>600 Stueck</Ausgelieferte_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <Berechnete_Menge_Einheit>Stueck</Berechnete_Menge_Einheit>
+      <Berechnete_Menge>600 Stueck</Berechnete_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <MOA_203>12.57</MOA_203>
+      <Rechnungspreis>4.76</Rechnungspreis>
+      <Preis_Maßeinheit>Stueck</Preis_Maßeinheit>
+      <Rechnungspreis_Einheit>4.76 Stueck</Rechnungspreis_Einheit>
+      <unitPriceBase>100</unitPriceBase>
+      <TAX_VAT>0</TAX_VAT>
+      <Abschlag>Andere Dienste</Abschlag>
+      <MOA_23>15.99</MOA_23>
+    </LineItem>
+    <LineItem nid="Item10" details="Invoice2">
+      <International_Article_Number>05847362285418</International_Article_Number>
+      <Produktidentifikation>International_Article_Number</Produktidentifikation>
+      <InvoiceLine/>
+      <Artikelnummer_des_Lieferanten>62952185</Artikelnummer_des_Lieferanten>
+      <Zusaetzliche_Produktidentifikation>Artikelnummer_des_Lieferanten</Zusaetzliche_Produktidentifikation>
+      <Description>Premium® Ultimate 6,0x120/70 count:Premium cs 6,0x120/70 T30 znc</Description>
+      <Ausgelieferte_Menge_Einheit>Stueck</Ausgelieferte_Menge_Einheit>
+      <Ausgelieferte_Menge>500 Stueck</Ausgelieferte_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <Berechnete_Menge_Einheit>Stueck</Berechnete_Menge_Einheit>
+      <Berechnete_Menge>500 Stueck</Berechnete_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <MOA_203>58.17</MOA_203>
+      <Rechnungspreis>26.44</Rechnungspreis>
+      <Preis_Maßeinheit>Stueck</Preis_Maßeinheit>
+      <Rechnungspreis_Einheit>26.44 Stueck</Rechnungspreis_Einheit>
+      <unitPriceBase>100</unitPriceBase>
+      <TAX_VAT>0</TAX_VAT>
+      <Abschlag>Andere Dienste</Abschlag>
+      <MOA_23>74.03</MOA_23>
+    </LineItem>
+    <LineItem nid="Item11" details="Invoice2">
+      <International_Article_Number>05847362312458</International_Article_Number>
+      <Produktidentifikation>International_Article_Number</Produktidentifikation>
+      <InvoiceLine/>
+      <Artikelnummer_des_Lieferanten>62859428</Artikelnummer_des_Lieferanten>
+      <Zusaetzliche_Produktidentifikation>Artikelnummer_des_Lieferanten</Zusaetzliche_Produktidentifikation>
+      <Description>Premium® Ultimate 6,0x150/70 flat:Premium Ultimate 6,0x150/70 T30 znc</Description>
+      <Ausgelieferte_Menge_Einheit>Stueck</Ausgelieferte_Menge_Einheit>
+      <Ausgelieferte_Menge>500 Stueck</Ausgelieferte_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <Berechnete_Menge_Einheit>Stueck</Berechnete_Menge_Einheit>
+      <Berechnete_Menge>500 Stueck</Berechnete_Menge>
+      <Mengen_Einheit>Stueck</Mengen_Einheit>
+      <MOA_203>86.33</MOA_203>
+      <Rechnungspreis>39.24</Rechnungspreis>
+      <Preis_Maßeinheit>Stueck</Preis_Maßeinheit>
+      <Rechnungspreis_Einheit>39.24 Stueck</Rechnungspreis_Einheit>
+      <unitPriceBase>100</unitPriceBase>
+      <TAX_VAT>0</TAX_VAT>
+      <Abschlag>Andere Dienste</Abschlag>
+      <MOA_23>109.87</MOA_23>
+    </LineItem>
+    <MOA_77>645.63</MOA_77>
+    <MOA_79>645.63</MOA_79>
+    <MOA_176>0</MOA_176>
+    <MOA_129>19.37</MOA_129>
+    <MOA_125>645.63</MOA_125>
+    <TAX_VAT>0</TAX_VAT>
+    <MOA_124>0</MOA_124>
+  </Message>
+  <messageReferenceNumber>5</messageReferenceNumber>
+  <messageTypeIdentifier>INVOIC</messageTypeIdentifier>
+  <versionNumberMessageType>D</versionNumberMessageType>
+  <releaseNumberMessageType>96A</releaseNumberMessageType>
+  <managingOrganisations>UN</managingOrganisations>
+  <controlSegmentBetweenItemAndTotalPart>S</controlSegmentBetweenItemAndTotalPart>
+  <totalNumberOfSegments>127</totalNumberOfSegments>
+  <dataExchangeCounter>6</dataExchangeCounter>
+  <exchangeReference>80</exchangeReference>
+</Interchange>

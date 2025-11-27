@@ -1,0 +1,137 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix edifact-o: <http://example.com/edifact-ontology/> .
+@prefix ex: <http://example.com/> .
+
+[ a sh:ValidationReport ;
+  sh:conforms false ;
+
+  # --- Result 1: Missing Total Additions/Deductions (MOA+131) ---
+  sh:result [
+      a sh:ValidationResult ;
+      sh:focusNode ex:mid1 ;
+      sh:resultPath edifact-o:hasTotalAdditionsAndDeductions ;
+      sh:severity sh:Violation ;
+      sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+      sh:sourceShape [ sh:path edifact-o:hasTotalAdditionsAndDeductions ] ; # Vereinfachte Shape-Referenz
+      sh:resultMessage "The segment MOA+131 is missing, i.e. the indication of the sums of the additions/deductions." ;
+  ] ;
+
+  # --- Result 2: Missing Taxable Amount (MOA+125) ---
+  sh:result [
+      a sh:ValidationResult ;
+      sh:focusNode ex:mid1 ;
+      sh:resultPath edifact-o:hasTaxableAmount ;
+      sh:severity sh:Violation ;
+      sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+      sh:sourceShape [ sh:path edifact-o:hasTaxableAmount ] ;
+      sh:resultMessage "The segment MOA+125 is missing, i.e. the indication of the taxable amount." ;
+  ] ;
+
+  sh:result [
+      a sh:ValidationResult ;
+      sh:focusNode ex:mid1 ;
+      sh:resultPath edifact-o:hasInvoiceAmount ;
+      sh:severity sh:Violation ;
+      sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+      sh:sourceShape [ sh:path edifact-o:hasInvoiceAmount ] ;
+      sh:resultMessage "The segment MOA+77 is missing, i.e. the invoice amount is missing." ;
+  ] ;
+
+  sh:result [
+      a sh:ValidationResult ;
+      sh:focusNode ex:mid1 ;
+      sh:resultPath edifact-o:hasDocumentType ;
+      sh:value "Rechnung" ; # Der Wert, der den Fehler verursacht hat
+      sh:severity sh:Violation ;
+      sh:sourceConstraintComponent sh:InConstraintComponent ;
+      sh:sourceShape [ sh:path edifact-o:hasDocumentType ] ;
+      sh:resultMessage "Data element 1001 is missing in the BGM segment" ;
+  ] ;
+
+  sh:result [
+      a sh:ValidationResult ;
+      sh:focusNode ex:Invoice1 ;
+      sh:resultPath edifact-o:belongsToProcess ;
+      sh:severity sh:Violation ;
+      sh:sourceConstraintComponent sh:HasValueConstraintComponent ;
+      sh:sourceShape [ sh:path edifact-o:belongsToProcess ] ;
+      sh:resultMessage "Node <http://example.com/Invoice1>->edifact-o:belongsToProcess does not contain a value in the set: ['Literal(\"ProcessExample\")']" ;
+  ] ;
+
+  sh:result [
+      a sh:ValidationResult ;
+      sh:focusNode ex:mid1 ;
+      sh:resultPath edifact-o:hasTotalLineItemAmount ;
+      sh:severity sh:Violation ;
+      sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+      sh:sourceShape [ sh:path edifact-o:hasTotalLineItemAmount ] ;
+      sh:resultMessage "The segment MOA+79 is missing, i.e. the indication of the total position amount." ;
+  ];
+
+ sh:result [
+      a sh:ValidationResult ;
+      sh:focusNode ex:mid1 ;
+      sh:resultPath edifact-o:hasTotalAdditionsAndDeductions ;
+      sh:severity sh:Violation ;
+      sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+      sh:sourceShape [ sh:path edifact-o:hasTotalAdditionsAndDeductions ] ; # Vereinfachte Shape-Referenz
+      sh:resultMessage "The segment MOA+131 is missing, i.e. the indication of the sums of the additions/deductions." ;
+  ] ;
+
+  # --- Result 2: Missing Taxable Amount (MOA+125) ---
+  sh:result [
+      a sh:ValidationResult ;
+      sh:focusNode ex:mid1 ;
+      sh:resultPath edifact-o:hasTaxableAmount ;
+      sh:severity sh:Violation ;
+      sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+      sh:sourceShape [ sh:path edifact-o:hasTaxableAmount ] ;
+      sh:resultMessage "The segment MOA+125 is missing, i.e. the indication of the taxable amount." ;
+  ] ;
+
+  sh:result [
+      a sh:ValidationResult ;
+      sh:focusNode ex:mid1 ;
+      sh:resultPath edifact-o:hasInvoiceAmount ;
+      sh:severity sh:Violation ;
+      sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+      sh:sourceShape [ sh:path edifact-o:hasInvoiceAmount ] ;
+      sh:resultMessage "The segment MOA+77 is missing, i.e. the invoice amount is missing." ;
+  ] ;
+
+  sh:result [
+      a sh:ValidationResult ;
+      sh:focusNode ex:mid1 ;
+      sh:resultPath edifact-o:hasDocumentType ;
+      sh:value "Rechnung" ; # Der Wert, der den Fehler verursacht hat
+      sh:severity sh:Violation ;
+      sh:sourceConstraintComponent sh:InConstraintComponent ;
+      sh:sourceShape [ sh:path edifact-o:hasDocumentType ] ;
+      sh:resultMessage "Data element 1001 is missing in the BGM segment" ;
+  ] ;
+
+  sh:result [
+      a sh:ValidationResult ;
+      sh:focusNode ex:Invoice1 ;
+      sh:resultPath edifact-o:belongsToProcess ;
+      sh:severity sh:Violation ;
+      sh:sourceConstraintComponent sh:HasValueConstraintComponent ;
+      sh:sourceShape [ sh:path edifact-o:belongsToProcess ] ;
+      sh:resultMessage "Node <http://example.com/Invoice1>->edifact-o:belongsToProcess does not contain a value in the set: ['Literal(\"ProcessExample\")']" ;
+  ] ;
+
+  sh:result [
+      a sh:ValidationResult ;
+      sh:focusNode ex:mid1 ;
+      sh:resultPath edifact-o:hasTotalLineItemAmount ;
+      sh:severity sh:Violation ;
+      sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+      sh:sourceShape [ sh:path edifact-o:hasTotalLineItemAmount ] ;
+      sh:resultMessage "The segment MOA+79 is missing, i.e. the indication of the total position amount." ;
+  ]
+
+
+
+
+] .
