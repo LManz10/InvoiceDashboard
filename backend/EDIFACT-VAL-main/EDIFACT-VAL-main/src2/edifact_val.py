@@ -9,7 +9,7 @@ from general_edifact_to_enriched_xml import (
     EDIFACTToEnrichedXMLConverter,
     yarrrmlparser_bash, rmlmapper_bash,
     yarrrmlparser_batch, rmlmapper_batch,
-    validates
+    validates, validates2
 )
 
 def ediToShacl(edi_data: str) -> tuple[str, str]:
@@ -74,8 +74,24 @@ def ediToShacl(edi_data: str) -> tuple[str, str]:
 
         print("hier scheint alles geklappt zu haben3")
 
+    #    print(kg_output[:1000])
+
 
         return kg_output, validation_report
+
+
+
+def graphToShacl(graph_data: str) -> str:
+    ttl_file_base = "ProcessExample"
+
+
+    validation_report = validates2(ttl_file_base, graph_data)
+
+    print("type: ", type(validation_report))
+
+    return validation_report          # gibt glaub den graphen zurück nicht string
+
+
 
 
 
@@ -109,8 +125,8 @@ if __name__ == '__main__':
 
     try:
         edi_inhalt = read_edi_file_as_string(meineFile)
-        print(edi_inhalt[:500]) 
-        print("EDIFACT-Datei erfolgreich gelesen.")
+     #   print(edi_inhalt[:500]) 
+     #   print("EDIFACT-Datei erfolgreich gelesen.")
     except (FileNotFoundError, UnicodeDecodeError) as e:
         print(f"Fehler beim Lesen der EDIFACT-Datei: {e}")
 

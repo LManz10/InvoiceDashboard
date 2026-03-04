@@ -10,10 +10,14 @@ class ReportSerializer(serializers.ModelSerializer):
     result_path_verteilung = serializers.JSONField()
     severity_verteilung = serializers.JSONField()
     list_of_violations = serializers.JSONField()
+    source_constraint_component_verteilung = serializers.JSONField()
+    correlationData = serializers.JSONField()
+    allPaths = serializers.JSONField()
+    entropy_statistik = serializers.JSONField()
     
     class Meta:
         model = Report
-        fields = ['id', 'violation_count', 'status', 'name', 'focus_node_verteilung', 'result_path_verteilung', 'severity_verteilung', 'source_constraint_component_verteilung', 'anzahl_betroffener_suppliers', 'list_of_violations', 'graph']
+        fields = ['id', 'violation_count', 'status', 'name', 'most_violated_node', 'most_violated_path', 'most_violated_source_constraint_component', 'focus_node_verteilung', 'result_path_verteilung', 'severity_verteilung', 'source_constraint_component_verteilung', 'anzahl_betroffener_nodes', 'anzahl_betroffener_shapes', 'list_of_violations', 'graph', 'datengraph', 'edi_content', 'correlationData', 'allPaths', 'anteil_betroffener_shapes', 'entropy_statistik', 'focusNodeEntropy', 'resultPathEntropy', 'sourceConstraintComponentEntropy']
 
     
     def validate_status(self, value):
@@ -34,7 +38,13 @@ class FilterSerializer(serializers.ModelSerializer):
     result_path_verteilung = serializers.JSONField()
     severity_verteilung = serializers.JSONField()
     list_of_violations = serializers.JSONField()
+    source_constraint_component_verteilung = serializers.JSONField()
+    correlationData = serializers.JSONField()
+    allPaths = serializers.JSONField()
+    entropy_statistik = serializers.JSONField()
+
+    filterID = serializers.ReadOnlyField()
     
     class Meta:
         model = Filter
-        fields = ['filterID', 'originalReportID', 'violation_count', 'status', 'name', 'focus_node_verteilung', 'result_path_verteilung', 'severity_verteilung', 'anzahl_betroffener_suppliers', 'list_of_violations']
+        fields = ['filterID', 'originalReportID', 'violation_count', 'status', 'name', 'focus_node_verteilung', 'result_path_verteilung','source_constraint_component_verteilung', 'severity_verteilung', 'anzahl_betroffener_nodes', 'list_of_violations', 'most_violated_node', 'most_violated_path', 'most_violated_source_constraint_component', 'graph', 'correlationData', 'allPaths', 'entropy_statistik', 'focusNodeEntropy', 'resultPathEntropy', 'sourceConstraintComponentEntropy', 'datengraph']

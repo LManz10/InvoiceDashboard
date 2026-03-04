@@ -860,6 +860,39 @@ def validates(process, data_graph):
 
 
 
+
+def validates2(process, data_graph):    #kleine anpassung um direkt graph übergeben zu können
+
+  #  data_graph = \
+   #     folder_path + 'invoice.ttl'
+   # data_graph = path.abspath(data_graph)
+
+    process_type = process+ '.ttl'
+    shapes_graph = \
+        folder_path + process_type
+        
+    shapes_graph = path.abspath(shapes_graph)
+
+    conforms, v_graph, v_text = validate(data_graph, shacl_graph=shapes_graph,
+                                        shacl_graph_format="ttl", inference='rdfs',advanced=True, debug=False, 
+                                        serialize_report_graph=True)
+    result = v_text.split("\n")
+    message_lines = [line for line in result if line.strip().startswith("Message:")]
+    for j in range(len(message_lines)):
+        parts = message_lines[j].split(';')
+        parts = [part.strip() for part in parts]
+        message = parts[0].replace('Message:', '')
+        print(message)   
+
+    if isinstance(v_graph, (bytes, str)):
+        g = Graph()
+        g.parse(data=v_graph, format='ttl')
+        return g
+
+
+    return v_graph
+
+
 if __name__ == "__main__":
     with open("input.edi", "r") as f:
         edi_data = f.read()

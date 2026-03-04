@@ -1,0 +1,438 @@
+@prefix : <http://mapping.example.com/> .
+@prefix agentRole: <https://archive.org/services/purl/domain/modular_ontology_design_library/agentrole#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix dc: <http://purl.org/dc/elements/1.1#> .
+@prefix edifact-o: <https://purl.org/edifact/ontology#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix frapo: <http://purl.org/cerif/frapo/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix p2p-o: <https://purl.org/p2p-o#> .
+@prefix p2p-o-doc: <https://purl.org/p2p-o/document#> .
+@prefix p2p-o-doc-line: <https://purl.org/p2p-o/documentline#> .
+@prefix p2p-o-inv: <https://purl.org/p2p-o/invoice#> .
+@prefix p2p-o-item: <https://purl.org/p2p-o/item#> .
+@prefix p2p-o-org: <https://purl.org/p2p-o/organization#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix schema: <http://schema.org/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://example.com/4521888010871> a edifact-o:FormalOrganization;
+  agentRole:performsAgentRole <http://example.com/BY1>, <http://example.com/BY2>, <http://example.com/DP1>,
+    <http://example.com/DP2>;
+  p2p-o-org:globalLocationNumber 4521888010871 .
+
+<http://example.com/5847362910008> a edifact-o:FormalOrganization;
+  agentRole:performsAgentRole <http://example.com/SU1>, <http://example.com/SU2>;
+  p2p-o-org:globalLocationNumber 5847362910008 .
+
+<http://example.com/7428951000000> a edifact-o:FormalOrganization;
+  agentRole:performsAgentRole <http://example.com/IV1>, <http://example.com/IV2>;
+  p2p-o-org:globalLocationNumber 7428951000000 .
+
+<http://example.com/BY1> a <http://example.com/BuyerRole>;
+  frapo:hasCountryCode "BE";
+  vcard:hasStreetAddress "Main Avenue 456";
+  vcard:postalCode "2100";
+  agentRole:isProvidedBy <http://example.com/Invoice1>;
+  edifact-o:hasCity "City B";
+  edifact-o:hasCountry "BE";
+  p2p-o-org:VATIdentifier "BE0478912345";
+  p2p-o-org:formalName "Smith & Partners NV";
+  p2p-o-org:globalLocationNumber 4521888010871 .
+
+<http://example.com/BY2> a <http://example.com/BuyerRole>;
+  frapo:hasCountryCode "BE";
+  vcard:hasStreetAddress "Main Avenue 456";
+  vcard:postalCode "2100";
+  agentRole:isProvidedBy <http://example.com/Invoice2>;
+  edifact-o:hasCity "City B";
+  edifact-o:hasCountry "BE";
+  p2p-o-org:VATIdentifier "BE0478912345";
+  p2p-o-org:formalName "Smith & Partners NV";
+  p2p-o-org:globalLocationNumber 4521888010871 .
+
+<http://example.com/DP1> a <http://example.com/DeliveryPartyRole>;
+  frapo:hasCountryCode "BE";
+  vcard:hasStreetAddress "Main Avenue 456";
+  vcard:postalCode "2100";
+  agentRole:isProvidedBy <http://example.com/Invoice1>;
+  edifact-o:hasCity "City B";
+  edifact-o:hasCountry "BE";
+  p2p-o-org:VATIdentifier "BE0478912345";
+  p2p-o-org:formalName "Smith & Partners NV:MitglNr. 548721";
+  p2p-o-org:globalLocationNumber 4521888010871 .
+
+<http://example.com/DP2> a <http://example.com/DeliveryPartyRole>;
+  frapo:hasCountryCode "BE";
+  vcard:hasStreetAddress "Main Avenue 456";
+  vcard:postalCode "2100";
+  agentRole:isProvidedBy <http://example.com/Invoice2>;
+  edifact-o:hasCity "City B";
+  edifact-o:hasCountry "BE";
+  p2p-o-org:VATIdentifier "BE0478912345";
+  p2p-o-org:formalName "Smith & Partners NV:MitglNr. 548721";
+  p2p-o-org:globalLocationNumber 4521888010871 .
+
+<http://example.com/IV1> a <http://example.com/InvoiceeRole>;
+  frapo:hasCountryCode "DE";
+  vcard:hasStreetAddress "Business Road 789";
+  vcard:postalCode "20095";
+  agentRole:isProvidedBy <http://example.com/Invoice1>;
+  edifact-o:hasCity "City C";
+  edifact-o:hasCountry "DE";
+  p2p-o-org:VATIdentifier "BE0491823456";
+  p2p-o-org:formalName "Central Purchasing Office: GmbH";
+  p2p-o-org:globalLocationNumber 7428951000000 .
+
+<http://example.com/IV2> a <http://example.com/InvoiceeRole>;
+  frapo:hasCountryCode "DE";
+  vcard:hasStreetAddress "Business Road 789";
+  vcard:postalCode "20095";
+  agentRole:isProvidedBy <http://example.com/Invoice2>;
+  edifact-o:hasCity "City C";
+  edifact-o:hasCountry "DE";
+  p2p-o-org:VATIdentifier "BE0491823456";
+  p2p-o-org:formalName "Central Purchasing Office: GmbH";
+  p2p-o-org:globalLocationNumber 7428951000000 .
+
+<http://example.com/Invoice1> a edifact-o:E-Invoice;
+  edifact-o:belongsToProcess "None";
+  edifact-o:followsStandard <http://example.com/Structure0>;
+  edifact-o:hasDeliveryParty <http://example.com/DP1>;
+  edifact-o:hasInvoiceDetails <http://example.com/mid1>;
+  edifact-o:hasInvoicee <http://example.com/IV1>;
+  edifact-o:hasItem <http://example.com/Item1>;
+  p2p-o-inv:hasBuyer <http://example.com/BY1>;
+  p2p-o-inv:hasSupplier <http://example.com/SU1> .
+
+<http://example.com/Invoice2> a edifact-o:E-Invoice;
+  edifact-o:belongsToProcess "None";
+  edifact-o:followsStandard <http://example.com/Structure0>;
+  edifact-o:hasDeliveryParty <http://example.com/DP2>;
+  edifact-o:hasInvoiceDetails <http://example.com/mid2>;
+  edifact-o:hasInvoicee <http://example.com/IV2>;
+  edifact-o:hasItem <http://example.com/Item10>, <http://example.com/Item11>, <http://example.com/Item2>,
+    <http://example.com/Item3>, <http://example.com/Item4>, <http://example.com/Item5>,
+    <http://example.com/Item6>, <http://example.com/Item7>, <http://example.com/Item8>,
+    <http://example.com/Item9>;
+  p2p-o-inv:hasBuyer <http://example.com/BY2>;
+  p2p-o-inv:hasSupplier <http://example.com/SU2> .
+
+<http://example.com/Item1> a p2p-o-item:item;
+  edifact-o:deliveredQuantityWithUnit "Stueck";
+  edifact-o:despatchQuantity "100 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAdditionalProductIdentification "Artikelnummer_des_Lieferanten";
+  edifact-o:hasAllowanceAmount "93"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAllowanceReason "Andere Dienste";
+  edifact-o:hasInvoiceprice "186"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasLineItemAmount "93"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasPriceUnit "Stueck";
+  edifact-o:hasProductIdentification "International_Article_Number";
+  edifact-o:hasQuantityUnit "Stueck";
+  edifact-o:hasVATrate "0"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:internationalArticleNumber "05847291840335";
+  edifact-o:isItemOf <http://example.com/Invoice1>;
+  edifact-o:itemNumberSupplier "GB058412200";
+  edifact-o:unitPriceBasis "100"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantity "100 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantityUnitOfMeasure "Stueck";
+  p2p-o-inv:hasInvoiceLine ""^^<http://www.w3.org/2001/XMLSchema#integer>;
+  p2p-o-item:itemName "GB® mounting bracket M12x 250x50 with:GB mount.brkt M12x 250x50" .
+
+<http://example.com/Item10> a p2p-o-item:item;
+  edifact-o:deliveredQuantityWithUnit "Stueck";
+  edifact-o:despatchQuantity "500 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAdditionalProductIdentification "Artikelnummer_des_Lieferanten";
+  edifact-o:hasAllowanceAmount "74.03"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAllowanceReason "Andere Dienste";
+  edifact-o:hasInvoiceprice "26.44"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasLineItemAmount "58.17"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasPriceUnit "Stueck";
+  edifact-o:hasProductIdentification "International_Article_Number";
+  edifact-o:hasQuantityUnit "Stueck";
+  edifact-o:hasVATrate "0"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:internationalArticleNumber "05847362285418";
+  edifact-o:isItemOf <http://example.com/Invoice2>;
+  edifact-o:itemNumberSupplier "62952185";
+  edifact-o:unitPriceBasis "100"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantity "500 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantityUnitOfMeasure "Stueck";
+  p2p-o-inv:hasInvoiceLine ""^^<http://www.w3.org/2001/XMLSchema#integer>;
+  p2p-o-item:itemName "Premium® Ultimate 6,0x120/70 count:Premium cs 6,0x120/70 T30 znc" .
+
+<http://example.com/Item11> a p2p-o-item:item;
+  edifact-o:deliveredQuantityWithUnit "Stueck";
+  edifact-o:despatchQuantity "500 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAdditionalProductIdentification "Artikelnummer_des_Lieferanten";
+  edifact-o:hasAllowanceAmount "109.87"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAllowanceReason "Andere Dienste";
+  edifact-o:hasInvoiceprice "39.24"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasLineItemAmount "86.33"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasPriceUnit "Stueck";
+  edifact-o:hasProductIdentification "International_Article_Number";
+  edifact-o:hasQuantityUnit "Stueck";
+  edifact-o:hasVATrate "0"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:internationalArticleNumber "05847362312458";
+  edifact-o:isItemOf <http://example.com/Invoice2>;
+  edifact-o:itemNumberSupplier "62859428";
+  edifact-o:unitPriceBasis "100"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantity "500 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantityUnitOfMeasure "Stueck";
+  p2p-o-inv:hasInvoiceLine ""^^<http://www.w3.org/2001/XMLSchema#integer>;
+  p2p-o-item:itemName "Premium® Ultimate 6,0x150/70 flat:Premium Ultimate 6,0x150/70 T30 znc" .
+
+<http://example.com/Item2> a p2p-o-item:item;
+  edifact-o:deliveredQuantityWithUnit "Stueck";
+  edifact-o:despatchQuantity "2500 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAdditionalProductIdentification "Artikelnummer_des_Lieferanten";
+  edifact-o:hasAllowanceAmount "43.82"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAllowanceReason "Andere Dienste";
+  edifact-o:hasInvoiceprice "3.13"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasLineItemAmount "34.43"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasPriceUnit "Stueck";
+  edifact-o:hasProductIdentification "International_Article_Number";
+  edifact-o:hasQuantityUnit "Stueck";
+  edifact-o:hasVATrate "0"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:internationalArticleNumber "05847362215824";
+  edifact-o:isItemOf <http://example.com/Invoice2>;
+  edifact-o:itemNumberSupplier "62847153";
+  edifact-o:unitPriceBasis "100"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantity "2500 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantityUnitOfMeasure "Stueck";
+  p2p-o-inv:hasInvoiceLine ""^^<http://www.w3.org/2001/XMLSchema#integer>;
+  p2p-o-item:itemName "Premium® Ultimate 4,0x 40/24 flat:Premium Ultimate 4,0x 40/24 T20 znc" .
+
+<http://example.com/Item3> a p2p-o-item:item;
+  edifact-o:deliveredQuantityWithUnit "Stueck";
+  edifact-o:despatchQuantity "500 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAdditionalProductIdentification "Artikelnummer_des_Lieferanten";
+  edifact-o:hasAllowanceAmount "111.61"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAllowanceReason "Andere Dienste";
+  edifact-o:hasInvoiceprice "39.86"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasLineItemAmount "87.69"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasPriceUnit "Stueck";
+  edifact-o:hasProductIdentification "International_Article_Number";
+  edifact-o:hasQuantityUnit "Stueck";
+  edifact-o:hasVATrate "0"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:internationalArticleNumber "05847362218945";
+  edifact-o:isItemOf <http://example.com/Invoice2>;
+  edifact-o:itemNumberSupplier "62859427";
+  edifact-o:unitPriceBasis "100"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantity "500 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantityUnitOfMeasure "Stueck";
+  p2p-o-inv:hasInvoiceLine ""^^<http://www.w3.org/2001/XMLSchema#integer>;
+  p2p-o-item:itemName "Premium® Ultimate 6,0x160/70 flat:Premium Ultimate 6,0x160/70 T30 znc" .
+
+<http://example.com/Item4> a p2p-o-item:item;
+  edifact-o:deliveredQuantityWithUnit "Stueck";
+  edifact-o:despatchQuantity "500 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAdditionalProductIdentification "Artikelnummer_des_Lieferanten";
+  edifact-o:hasAllowanceAmount "240.32"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAllowanceReason "Andere Dienste";
+  edifact-o:hasInvoiceprice "85.83"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasLineItemAmount "188.83"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasPriceUnit "Stueck";
+  edifact-o:hasProductIdentification "International_Article_Number";
+  edifact-o:hasQuantityUnit "Stueck";
+  edifact-o:hasVATrate "0"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:internationalArticleNumber "05847362274138";
+  edifact-o:isItemOf <http://example.com/Invoice2>;
+  edifact-o:itemNumberSupplier "62859518";
+  edifact-o:unitPriceBasis "100"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantity "500 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantityUnitOfMeasure "Stueck";
+  p2p-o-inv:hasInvoiceLine ""^^<http://www.w3.org/2001/XMLSchema#integer>;
+  p2p-o-item:itemName "Premium® Ultimate 6,0x220/70 flat:Premium Ultimate 6,0x220/70 T30 znc" .
+
+<http://example.com/Item5> a p2p-o-item:item;
+  edifact-o:deliveredQuantityWithUnit "Stueck";
+  edifact-o:despatchQuantity "500 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAdditionalProductIdentification "Artikelnummer_des_Lieferanten";
+  edifact-o:hasAllowanceAmount "30.69"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAllowanceReason "Andere Dienste";
+  edifact-o:hasInvoiceprice "10.96"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasLineItemAmount "24.11"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasPriceUnit "Stueck";
+  edifact-o:hasProductIdentification "International_Article_Number";
+  edifact-o:hasQuantityUnit "Stueck";
+  edifact-o:hasVATrate "0"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:internationalArticleNumber "05847362285742";
+  edifact-o:isItemOf <http://example.com/Invoice2>;
+  edifact-o:itemNumberSupplier "62952847";
+  edifact-o:unitPriceBasis "100"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantity "500 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantityUnitOfMeasure "Stueck";
+  p2p-o-inv:hasInvoiceLine ""^^<http://www.w3.org/2001/XMLSchema#integer>;
+  p2p-o-item:itemName "Premium® Ultimate 6,0x 30 counters:Premium cs 6,0x 30 T30 znc" .
+
+<http://example.com/Item6> a p2p-o-item:item;
+  edifact-o:deliveredQuantityWithUnit "Stueck";
+  edifact-o:despatchQuantity "1000 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAdditionalProductIdentification "Artikelnummer_des_Lieferanten";
+  edifact-o:hasAllowanceAmount "30.8"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAllowanceReason "Andere Dienste";
+  edifact-o:hasInvoiceprice "5.5"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasLineItemAmount "24.2"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasPriceUnit "Stueck";
+  edifact-o:hasProductIdentification "International_Article_Number";
+  edifact-o:hasQuantityUnit "Stueck";
+  edifact-o:hasVATrate "0"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:internationalArticleNumber "05847362715824";
+  edifact-o:isItemOf <http://example.com/Invoice2>;
+  edifact-o:itemNumberSupplier "63045189";
+  edifact-o:unitPriceBasis "100"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantity "1000 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantityUnitOfMeasure "Stueck";
+  p2p-o-inv:hasInvoiceLine ""^^<http://www.w3.org/2001/XMLSchema#integer>;
+  p2p-o-item:itemName "Premium® Ultimate Shield Outdoor 4,:Premium 4,0x 40 cntr T20 shield cor" .
+
+<http://example.com/Item7> a p2p-o-item:item;
+  edifact-o:deliveredQuantityWithUnit "Stueck";
+  edifact-o:despatchQuantity "250 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAdditionalProductIdentification "Artikelnummer_des_Lieferanten";
+  edifact-o:hasAllowanceAmount "68.22"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAllowanceReason "Andere Dienste";
+  edifact-o:hasInvoiceprice "48.73"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasLineItemAmount "53.61"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasPriceUnit "Stueck";
+  edifact-o:hasProductIdentification "International_Article_Number";
+  edifact-o:hasQuantityUnit "Stueck";
+  edifact-o:hasVATrate "0"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:internationalArticleNumber "05847362718459";
+  edifact-o:isItemOf <http://example.com/Invoice2>;
+  edifact-o:itemNumberSupplier "63158324";
+  edifact-o:unitPriceBasis "100"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantity "250 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantityUnitOfMeasure "Stueck";
+  p2p-o-inv:hasInvoiceLine ""^^<http://www.w3.org/2001/XMLSchema#integer>;
+  p2p-o-item:itemName "Premium® Ultimate Shield Outdoor 6,:Premium cs 6,0x140/80 T30 shield" .
+
+<http://example.com/Item8> a p2p-o-item:item;
+  edifact-o:deliveredQuantityWithUnit "BJ";
+  edifact-o:despatchQuantity "2 BJ"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAdditionalProductIdentification "Artikelnummer_des_Lieferanten";
+  edifact-o:hasAllowanceAmount "75.69"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAllowanceReason "Andere Dienste";
+  edifact-o:hasInvoiceprice "75.69"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasLineItemAmount "75.69"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasProductIdentification "International_Article_Number";
+  edifact-o:hasQuantityUnit "BJ";
+  edifact-o:hasVATrate "0"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:internationalArticleNumber "04852147038521";
+  edifact-o:isItemOf <http://example.com/Invoice2>;
+  edifact-o:itemNumberSupplier "18524713";
+  p2p-o-doc-line:invoicedQuantity "2 BJ"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantityUnitOfMeasure "BJ";
+  p2p-o-inv:hasInvoiceLine ""^^<http://www.w3.org/2001/XMLSchema#integer>;
+  p2p-o-item:itemName "XYZ SUPERFIX® anchor mortar 1-comp:XYZ anchor mortar 1-comp 5kg" .
+
+<http://example.com/Item9> a p2p-o-item:item;
+  edifact-o:deliveredQuantityWithUnit "Stueck";
+  edifact-o:despatchQuantity "600 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAdditionalProductIdentification "Artikelnummer_des_Lieferanten";
+  edifact-o:hasAllowanceAmount "15.99"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasAllowanceReason "Andere Dienste";
+  edifact-o:hasInvoiceprice "4.76"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasLineItemAmount "12.57"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasPriceUnit "Stueck";
+  edifact-o:hasProductIdentification "International_Article_Number";
+  edifact-o:hasQuantityUnit "Stueck";
+  edifact-o:hasVATrate "0"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:internationalArticleNumber "05847362745821";
+  edifact-o:isItemOf <http://example.com/Invoice2>;
+  edifact-o:itemNumberSupplier "62852471";
+  edifact-o:unitPriceBasis "100"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantity "600 Stueck"^^<http://www.w3.org/2001/XMLSchema#float>;
+  p2p-o-doc-line:invoicedQuantityUnitOfMeasure "Stueck";
+  p2p-o-inv:hasInvoiceLine ""^^<http://www.w3.org/2001/XMLSchema#integer>;
+  p2p-o-item:itemName "Premium® Ultimate 5,0x 35/18 flat:Premium Ultimate 5,0x 35/18 T25 znc" .
+
+<http://example.com/SU1> a <http://example.com/SupplierRole>;
+  frapo:hasCountryCode "NL";
+  vcard:hasStreetAddress "Industrial Street 123";
+  vcard:postalCode "3012 AA";
+  agentRole:isProvidedBy <http://example.com/Invoice1>;
+  edifact-o:hasCity "City A";
+  edifact-o:hasCountry "NL";
+  p2p-o-org:VATIdentifier "NL824567891B01";
+  p2p-o-org:formalName "ABC Trading B.V.:Gate 5";
+  p2p-o-org:globalLocationNumber 5847362910008 .
+
+<http://example.com/SU2> a <http://example.com/SupplierRole>;
+  frapo:hasCountryCode "NL";
+  vcard:hasStreetAddress "Industrial Street 123";
+  vcard:postalCode "3012 AA";
+  agentRole:isProvidedBy <http://example.com/Invoice2>;
+  edifact-o:hasCity "City A";
+  edifact-o:hasCountry "NL";
+  p2p-o-org:VATIdentifier "NL824567891B01";
+  p2p-o-org:formalName "ABC Trading B.V.:Gate 5";
+  p2p-o-org:globalLocationNumber 5847362910008 .
+
+<http://example.com/Structure0> a edifact-o:EANCOM-Structure;
+  edifact-o:controlSegmentBetweenItemAndTotalPart "S";
+  edifact-o:creationDate 230608;
+  edifact-o:creationTime 1004;
+  edifact-o:dataExchangeCounter 6;
+  edifact-o:dataExchangeReference "80";
+  edifact-o:managingOrganisations "UN";
+  edifact-o:messageReferenceNumber "1", "5";
+  edifact-o:messageTypeIdentifier "INVOIC";
+  edifact-o:recipientIndicator "7428951000000";
+  edifact-o:releaseNumberMessageType "96A";
+  edifact-o:senderIndicator "5847362910008";
+  edifact-o:synatxIdentifier "UNOC";
+  edifact-o:synatxVersion 3;
+  edifact-o:totalNumberOfSegments "127", "37";
+  edifact-o:versionNumberMessageType "D" .
+
+<http://example.com/mid1> a edifact-o:InvoiceDetails;
+  schema:currency "EUR";
+  edifact-o:dateOrderNumberSupplier "20230608";
+  edifact-o:documentDate "20230608";
+  edifact-o:hasDiscountPercentage "3"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasDiscountPercentagePaymentConditions "3"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasDocumentFunction "Original";
+  edifact-o:hasDocumentNumber "23051247";
+  edifact-o:hasDocumentType "Rechnung";
+  edifact-o:hasInvoiceAmount "93"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasTaxAmount "0"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasTaxableAmount "93"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasTotalAmountUnderPaymentReduction "2.79"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasTotalDutyTaxFeeAmount "0"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasTotalLineItemAmount "93"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasVATrate "0"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:invoiceCurrency "EUR";
+  edifact-o:orderNumberBuyer "16-92847-53";
+  edifact-o:orderNumberSupplier "VO324758";
+  edifact-o:paymentCondition "Abzug";
+  edifact-o:paymentReferenceDate "60 Tag(e) nach Rechnungsdatum";
+  p2p-o-inv:actualDeliveryDate "20230607" .
+
+<http://example.com/mid2> a edifact-o:InvoiceDetails;
+  schema:currency "EUR";
+  edifact-o:dateOrderNumberSupplier "20230608";
+  edifact-o:documentDate "20230608";
+  edifact-o:hasDiscountPercentage "3"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasDiscountPercentagePaymentConditions "3"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasDocumentFunction "Original";
+  edifact-o:hasDocumentNumber "23052834";
+  edifact-o:hasDocumentType "Rechnung";
+  edifact-o:hasInvoiceAmount "645.63"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasTaxAmount "0"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasTaxableAmount "645.63"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasTotalAmountUnderPaymentReduction "19.37"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasTotalDutyTaxFeeAmount "0"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasTotalLineItemAmount "645.63"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:hasVATrate "0"^^<http://www.w3.org/2001/XMLSchema#float>;
+  edifact-o:invoiceCurrency "EUR";
+  edifact-o:orderNumberBuyer "16-93254-72";
+  edifact-o:orderNumberSupplier "VO328145";
+  edifact-o:paymentCondition "Abzug";
+  edifact-o:paymentReferenceDate "60 Tag(e) nach Rechnungsdatum";
+  p2p-o-inv:actualDeliveryDate "20230607" .
